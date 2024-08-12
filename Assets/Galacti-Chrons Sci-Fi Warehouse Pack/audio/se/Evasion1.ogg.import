@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d4ldkjxh0q76l"
+path="res://.godot/imported/Evasion1.ogg-754a4174c401138bbaeda3a54b8a6621.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Evasion1.ogg"
+dest_files=["res://.godot/imported/Evasion1.ogg-754a4174c401138bbaeda3a54b8a6621.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

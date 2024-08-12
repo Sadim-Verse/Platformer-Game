@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cojvxmyen8uww"
+path="res://.godot/imported/Darkness.ogg-d4f1160ed75fff5a0b6fc3681edd6681.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/bgs/Darkness.ogg"
+dest_files=["res://.godot/imported/Darkness.ogg-d4f1160ed75fff5a0b6fc3681edd6681.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

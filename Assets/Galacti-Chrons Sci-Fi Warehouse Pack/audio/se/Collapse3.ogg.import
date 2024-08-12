@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b50abo5cdwbtt"
+path="res://.godot/imported/Collapse3.ogg-436317cc0a4265f415ef33cf4ed8f43f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Collapse3.ogg"
+dest_files=["res://.godot/imported/Collapse3.ogg-436317cc0a4265f415ef33cf4ed8f43f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

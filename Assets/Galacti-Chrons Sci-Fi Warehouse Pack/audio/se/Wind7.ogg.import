@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4syphppbpabs"
+path="res://.godot/imported/Wind7.ogg-56ea09dd25c65d4a54b2d3499dd43a73.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Wind7.ogg"
+dest_files=["res://.godot/imported/Wind7.ogg-56ea09dd25c65d4a54b2d3499dd43a73.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://e587y3u2nxqn"
+path="res://.godot/imported/Blow3.ogg-52be6889f1fae821eb29bfba00249853.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Blow3.ogg"
+dest_files=["res://.godot/imported/Blow3.ogg-52be6889f1fae821eb29bfba00249853.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

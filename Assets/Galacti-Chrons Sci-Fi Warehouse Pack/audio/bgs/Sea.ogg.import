@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d1sbmbaxkdp40"
+path="res://.godot/imported/Sea.ogg-c2adc79d8234fcf6e425bfd5133a4e48.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/bgs/Sea.ogg"
+dest_files=["res://.godot/imported/Sea.ogg-c2adc79d8234fcf6e425bfd5133a4e48.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

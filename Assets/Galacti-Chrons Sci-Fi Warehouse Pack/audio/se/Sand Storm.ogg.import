@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0kr66vj6685p"
+path="res://.godot/imported/Sand Storm.ogg-6597fe86b09da6ddb839c12df924f80d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Sand Storm.ogg"
+dest_files=["res://.godot/imported/Sand Storm.ogg-6597fe86b09da6ddb839c12df924f80d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

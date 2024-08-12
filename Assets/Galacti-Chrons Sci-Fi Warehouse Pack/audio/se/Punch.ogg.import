@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bgbrl2mn4l7bt"
+path="res://.godot/imported/Punch.ogg-fc4a832633b2dc87dabe313995d6c74b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Punch.ogg"
+dest_files=["res://.godot/imported/Punch.ogg-fc4a832633b2dc87dabe313995d6c74b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

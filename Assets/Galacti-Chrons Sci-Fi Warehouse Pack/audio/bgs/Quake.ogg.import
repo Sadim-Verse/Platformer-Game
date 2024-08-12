@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://buhyfkdnxra8u"
+path="res://.godot/imported/Quake.ogg-a0c1b8fca401e1064054a46c375d8753.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/bgs/Quake.ogg"
+dest_files=["res://.godot/imported/Quake.ogg-a0c1b8fca401e1064054a46c375d8753.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

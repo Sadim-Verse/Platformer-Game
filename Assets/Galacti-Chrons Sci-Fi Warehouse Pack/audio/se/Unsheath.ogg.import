@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bfve3hvye1878"
+path="res://.godot/imported/Unsheath.ogg-ec9a5321ab3ba4e604e0fd0bd1376f8c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Unsheath.ogg"
+dest_files=["res://.godot/imported/Unsheath.ogg-ec9a5321ab3ba4e604e0fd0bd1376f8c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

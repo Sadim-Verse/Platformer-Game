@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://butd01pro7dka"
+path="res://.godot/imported/Explosion1.ogg-944aed770525be7c369b43d8f957fbf8.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Explosion1.ogg"
+dest_files=["res://.godot/imported/Explosion1.ogg-944aed770525be7c369b43d8f957fbf8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

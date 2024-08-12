@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dt0lkthf2kvlk"
+path="res://.godot/imported/blaster_20.ogg-c1525e054b4e8a38e5d651ce971dda95.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/blaster_20.ogg"
+dest_files=["res://.godot/imported/blaster_20.ogg-c1525e054b4e8a38e5d651ce971dda95.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

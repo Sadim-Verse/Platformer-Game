@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://batxexwji8aba"
+path="res://.godot/imported/powerup_08.ogg-f582e5b074c15fb9d561a1a6581417b6.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/powerup_08.ogg"
+dest_files=["res://.godot/imported/powerup_08.ogg-f582e5b074c15fb9d561a1a6581417b6.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

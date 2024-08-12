@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c5dw617aw7fda"
+path="res://.godot/imported/Decision2.ogg-e8dd91acbb19735aaf918b5591dc522c.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Decision2.ogg"
+dest_files=["res://.godot/imported/Decision2.ogg-e8dd91acbb19735aaf918b5591dc522c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

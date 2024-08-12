@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bddxsmhpcbkda"
+path="res://.godot/imported/Storm1.ogg-9e1c24605bcb904c742a6ad63b6a007f.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/bgs/Storm1.ogg"
+dest_files=["res://.godot/imported/Storm1.ogg-9e1c24605bcb904c742a6ad63b6a007f.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

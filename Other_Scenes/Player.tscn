@@ -311,10 +311,8 @@ shape = SubResource("RectangleShape2D_032ee")
 position = Vector2(1, 10)
 scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lacfv")
-animation = &"died"
+animation = &"idle"
 autoplay = "idle"
-frame = 3
-frame_progress = 0.380227
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_bottom = 500

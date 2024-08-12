@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bj2cffv0qefmm"
+path="res://.godot/imported/Thunder8.ogg-1b5dd8a3fc8d6edfc481738bb5a91fbd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Thunder8.ogg"
+dest_files=["res://.godot/imported/Thunder8.ogg-1b5dd8a3fc8d6edfc481738bb5a91fbd.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

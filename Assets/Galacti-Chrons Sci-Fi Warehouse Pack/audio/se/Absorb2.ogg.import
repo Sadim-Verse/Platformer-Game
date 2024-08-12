@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dfsntykyiidug"
+path="res://.godot/imported/Absorb2.ogg-8452a24d6e9a87348ec6dc32cb590565.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Absorb2.ogg"
+dest_files=["res://.godot/imported/Absorb2.ogg-8452a24d6e9a87348ec6dc32cb590565.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

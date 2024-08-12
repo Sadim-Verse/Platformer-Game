@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b5g642jmwm8dk"
+path="res://.godot/imported/scanner_04.ogg-a0bcb82f5d59e1f020dbf25fcf2d2674.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/scanner_04.ogg"
+dest_files=["res://.godot/imported/scanner_04.ogg-a0bcb82f5d59e1f020dbf25fcf2d2674.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

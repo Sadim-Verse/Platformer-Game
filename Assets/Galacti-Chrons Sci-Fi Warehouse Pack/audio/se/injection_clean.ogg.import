@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://praafilxuf34"
+path="res://.godot/imported/injection_clean.ogg-0698d9e60ff16e1658ae99eff36931ca.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/injection_clean.ogg"
+dest_files=["res://.godot/imported/injection_clean.ogg-0698d9e60ff16e1658ae99eff36931ca.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

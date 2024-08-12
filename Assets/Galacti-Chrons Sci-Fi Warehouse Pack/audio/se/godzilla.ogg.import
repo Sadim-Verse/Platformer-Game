@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://16wvbgcga5k8"
+path="res://.godot/imported/godzilla.ogg-98d51f5b950236708be9a0552a37230d.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/godzilla.ogg"
+dest_files=["res://.godot/imported/godzilla.ogg-98d51f5b950236708be9a0552a37230d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

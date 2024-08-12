@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcv3j4jlpjay8"
+path="res://.godot/imported/cancel.ogg-1eabbef0b8fea8e948ce081d3fbf0319.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/cancel.ogg"
+dest_files=["res://.godot/imported/cancel.ogg-1eabbef0b8fea8e948ce081d3fbf0319.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

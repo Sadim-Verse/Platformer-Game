@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://sbq23gkknxt1"
+path="res://.godot/imported/glass_break_02.ogg-6442af8a831ce2e6c86bcae19495c10a.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/glass_break_02.ogg"
+dest_files=["res://.godot/imported/glass_break_02.ogg-6442af8a831ce2e6c86bcae19495c10a.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

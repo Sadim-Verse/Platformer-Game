@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://4og4q0wi5ewj"
+path="res://.godot/imported/Scream-03.ogg-badd054a8e11f28a3a00becfe8981100.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Scream-03.ogg"
+dest_files=["res://.godot/imported/Scream-03.ogg-badd054a8e11f28a3a00becfe8981100.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

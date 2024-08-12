@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dmly7qcr66hbu"
+path="res://.godot/imported/Damage3.ogg-ce11fa0467b792cc0231c98080a545ac.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Galacti-Chrons Sci-Fi Warehouse Pack/audio/se/Damage3.ogg"
+dest_files=["res://.godot/imported/Damage3.ogg-ce11fa0467b792cc0231c98080a545ac.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
