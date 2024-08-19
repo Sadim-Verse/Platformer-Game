@@ -72,6 +72,7 @@ block={
 2d_physics/layer_4="traps"
 2d_physics/layer_5="exit"
 2d_physics/layer_6="enemies"
+2d_physics/layer_7="objects"
 
 [rendering]
 

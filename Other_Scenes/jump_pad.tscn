@@ -80,6 +80,7 @@ animations = [{
 size = Vector2(25, 3)
 
 [node name="Jump_pad" type="Area2D"]
+collision_layer = 64
 collision_mask = 2
 script = ExtResource("4_tglrd")
 

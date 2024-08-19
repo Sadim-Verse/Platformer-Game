@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cc2wp3dof55uo"]
+[gd_scene load_steps=13 format=3 uid="uid://cc2wp3dof55uo"]
 
 [ext_resource type="PackedScene" uid="uid://7s6ljd1nw5f5" path="res://Other_Scenes/Player.tscn" id="1_7gwjw"]
 [ext_resource type="Script" path="res://Scripts/level1.gd" id="1_jlph7"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cgbfp7nmntj1b" path="res://Other_Scenes/spikeball.tscn" id="7_b6rok"]
 [ext_resource type="PackedScene" uid="uid://cqfyuc47ktis3" path="res://Other_Scenes/jump_pad.tscn" id="7_qlmd6"]
 [ext_resource type="PackedScene" uid="uid://bq3tsw5co80k6" path="res://Other_Scenes/saw.tscn" id="11_dk74f"]
+[ext_resource type="PackedScene" uid="uid://cs1r1joksnrbw" path="res://Other_Scenes/Skeleton.tscn" id="12_tmf7b"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_jlph7")
@@ -45,3 +46,5 @@ position = Vector2(982, 164)
 
 [node name="Deathzone" parent="." instance=ExtResource("5_it7n0")]
 position = Vector2(-143, 150)
+
+[node name="Skeleton" parent="." instance=ExtResource("12_tmf7b")]
