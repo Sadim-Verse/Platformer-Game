@@ -1,13 +1,17 @@
 extends CharacterBody2D
 
-var x_direction := 1
-var speed = Global.enemy_parameters['soldier']['speed']
+@onready var player = get_tree().get_first_node_in_group('player')
 @export var run_speed := 10
 @export var gravity := 300
+@export var health := 100
+
+var x_direction := 1
+var speed = Global.enemy_parameters['soldier']['speed']
 var speed_modifier := 1
 var attacking = false
 var attack_cooldown = false
-@onready var player = get_tree().get_first_node_in_group('player')
+var can_take_damage = false
+var player_is_idle = false
 
 func _process(delta):
 	#velocity.x = x_direction * speed * speed_modifier
@@ -15,6 +19,8 @@ func _process(delta):
 	check_cliff()
 	animate()
 	check_player_distance()
+	receiving_damage()
+	death()
 	
 	move_and_slide()
 
@@ -30,9 +36,10 @@ func animate():
 
 func attack_and_cooldown():
 	if attack_cooldown == false:
+		Global.enemy_attacking = true
 		$AnimationPlayer.current_animation = 'Attack'
 		print("Attack")
-		$Cooldown_timer.start(3)
+		$Timers/Cooldown_timer.start()
 		attack_cooldown = true
 		speed_modifier = 0
 
@@ -64,15 +71,42 @@ func  check_cliff():
 
 func cooldown_timer_timeout():
 	print("Idle")
-	$Attack_restarter.start(3)
+	$Timers/Attack_restarter.start()
+	player_is_idle = true
+	can_take_damage = true
+	Global.enemy_attacking = false
 	$AnimationPlayer.current_animation = 'Idle'
 	
 func attack_restarter_timeout():
 	print("chek chek")
+	player_is_idle = false
 	attack_cooldown = false
+	can_take_damage == false
 
 func _on_cooldown_timer_timeout():
 	cooldown_timer_timeout()
 
 func _on_attack_restarter_timeout():
 	attack_restarter_timeout()
+
+func receiving_damage():
+	if Global.player_attacking == true && player_is_idle == true:
+		if can_take_damage == true:
+			health -= 20
+			$AnimationPlayer.current_animation = 'Hurt'
+			$Timers/take_damage_cooldown.start()
+			can_take_damage = false
+			print("Orc health: ", health)
+
+func _on_take_damage_cooldown_timeout():
+	can_take_damage = true
+
+func death():
+	if health < 0:
+		health = 0
+		$AnimationPlayer.current_animation = 'Death'
+		$Timers/Death.start()
+
+func _on_death_timeout():
+	print("Gone")
+	self.queue_free()

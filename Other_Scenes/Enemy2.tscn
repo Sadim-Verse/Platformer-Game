@@ -27,7 +27,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_xsc15"]
 resource_name = "Death"
 length = 0.8
-loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -43,8 +42,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_m3mcy"]
 resource_name = "Hurt"
-length = 0.8
-loop_mode = 1
+length = 0.55
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -55,7 +53,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [32, 33, 34, 35, 36]
+"values": [32, 33, 34, 35, 5]
 }
 
 [sub_resource type="Animation" id="Animation_ec8vj"]
@@ -120,7 +118,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tt5d"]
 size = Vector2(13.6667, 14.6666)
 
-[node name="Orc" type="CharacterBody2D"]
+[node name="Orc" type="CharacterBody2D" groups=["enemy"]]
 scale = Vector2(3, 3)
 collision_layer = 32
 collision_mask = 3
@@ -156,12 +154,25 @@ target_position = Vector2(20, 20)
 [node name="Left" type="RayCast2D" parent="FloorRays"]
 target_position = Vector2(-20, 20)
 
-[node name="Cooldown_timer" type="Timer" parent="."]
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="Cooldown_timer" type="Timer" parent="Timers"]
+wait_time = 3.0
 one_shot = true
 
-[node name="Attack_restarter" type="Timer" parent="."]
+[node name="Attack_restarter" type="Timer" parent="Timers"]
+wait_time = 5.0
 one_shot = true
+
+[node name="take_damage_cooldown" type="Timer" parent="Timers"]
+wait_time = 0.8
+one_shot = true
+
+[node name="Death" type="Timer" parent="Timers"]
+wait_time = 0.5
 
 [connection signal="body_entered" from="WallCheckArea" to="." method="_on_wall_check_area_body_entered"]
-[connection signal="timeout" from="Cooldown_timer" to="." method="_on_cooldown_timer_timeout"]
-[connection signal="timeout" from="Attack_restarter" to="." method="_on_attack_restarter_timeout"]
+[connection signal="timeout" from="Timers/Cooldown_timer" to="." method="_on_cooldown_timer_timeout"]
+[connection signal="timeout" from="Timers/Attack_restarter" to="." method="_on_attack_restarter_timeout"]
+[connection signal="timeout" from="Timers/take_damage_cooldown" to="." method="_on_take_damage_cooldown_timeout"]
+[connection signal="timeout" from="Timers/Death" to="." method="_on_death_timeout"]
