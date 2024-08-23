@@ -9,6 +9,9 @@ var enemy_in_attack_range = false
 var enemy_attack_cooldown = true
 var player_alive = true
 var attack_inProgress = false
+var sprinting = false
+var sprint_speed = 400
+var last_sprint_time = 0
 
 @export var gravity = 600
 @export var jump_force = 250
@@ -25,6 +28,7 @@ func _physics_process(delta):
 	
 	basic_movement(delta)
 	player_animations()
+	sprint()
 	enemy_attack()
 	player_died()
 	attack()
@@ -49,12 +53,14 @@ func basic_movement(delta):
 func player_animations():
 	#if active == true:
 	if Input.is_action_pressed("move_left") && is_on_floor():
-		animated_sprite.play("run")
-		animated_sprite.set_flip_h(true)
+		if sprinting == false:
+			animated_sprite.play("run")
+			animated_sprite.set_flip_h(true)
 	
 	elif Input.is_action_pressed("move_right") && is_on_floor():
-		animated_sprite.play("run")
-		animated_sprite.set_flip_h(false)
+		if sprinting == false:
+			animated_sprite.play("run")
+			animated_sprite.set_flip_h(false)
 	
 	elif Input.is_action_just_pressed("jump") || velocity.y < 0:
 		animated_sprite.play("jump")
@@ -64,6 +70,7 @@ func player_animations():
 			animated_sprite.set_flip_h(false)
 	
 	elif not is_on_floor() && velocity.y > 0:
+		sprinting = false
 		animated_sprite.play("fall") 
 		if Input.is_action_pressed("move_left"):
 			animated_sprite.set_flip_h(true)
@@ -91,6 +98,26 @@ func jump_when_launched(force):
 	jumps_left = max_jumps - 1
 	launched = true
 
+func sprint():
+	if is_on_floor():
+		if Input.is_action_just_pressed("move_right") or Input.is_action_just_pressed("move_left"):
+			
+			if Time.get_ticks_msec() - last_sprint_time < 500:  # Double-tap detected
+				sprinting = true if Input.is_action_pressed("move_right") or Input.is_action_pressed("move_left") else  false
+				animated_sprite.play("Sprint")
+				print("Sprinting")
+				speed = sprint_speed
+			else:
+				sprinting = false
+				last_sprint_time = Time.get_ticks_msec()
+				
+		elif Input.is_action_just_released("move_right") or Input.is_action_just_released("move_left"):
+			print("stop")
+			speed = 150
+			#sprinting = false
+
+		# Update character position based on speed
+		#position += velocity * delta
 
 func _on_player_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):
@@ -107,7 +134,7 @@ func enemy_attack():
 			animated_sprite.play("hurt")
 			health -= 10
 			enemy_attack_cooldown = false
-			$enemy_cooldowm.start()
+			$Timers/enemy_cooldowm.start()
 			print(health)
 
 func _on_enemy_cooldowm_timeout():
@@ -128,9 +155,9 @@ func attack():
 		Global.player_attacking = true
 		attack_inProgress = true
 		animated_sprite.play("primary_attack")
-		$make_attack.start()
+		$Timers/make_attack.start()
 		
 func _on_make_attack_timeout():
-	$make_attack.stop()
+	$Timers/make_attack.stop()
 	Global.player_attacking = false
 	attack_inProgress = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cu5gd7vguijsh"]
+[gd_scene load_steps=15 format=3 uid="uid://cu5gd7vguijsh"]
 
 [ext_resource type="PackedScene" uid="uid://7s6ljd1nw5f5" path="res://Other_Scenes/Player.tscn" id="2_6yjmx"]
 [ext_resource type="PackedScene" uid="uid://l0abjmfylm17" path="res://Other_Scenes/background.tscn" id="2_icbps"]
@@ -8,11 +8,14 @@
 [ext_resource type="PackedScene" uid="uid://bq3tsw5co80k6" path="res://Other_Scenes/saw.tscn" id="5_5nnhr"]
 [ext_resource type="PackedScene" uid="uid://cgbfp7nmntj1b" path="res://Other_Scenes/spikeball.tscn" id="6_dx0fv"]
 [ext_resource type="PackedScene" uid="uid://bgcj4n3sc6ui8" path="res://Other_Scenes/tile_map.tscn" id="7_61wi8"]
-[ext_resource type="PackedScene" uid="uid://cs1r1joksnrbw" path="res://Other_Scenes/Skeleton.tscn" id="9_878d7"]
 [ext_resource type="PackedScene" uid="uid://cloptta8m1tow" path="res://Other_Scenes/start&save_scene.tscn" id="9_u5f4r"]
 [ext_resource type="PackedScene" uid="uid://dbx1iqggv5ho6" path="res://Other_Scenes/exit.tscn" id="10_av2sr"]
 [ext_resource type="PackedScene" uid="uid://be3whvdhujl5j" path="res://Other_Scenes/deathzone.tscn" id="10_ee7jf"]
+[ext_resource type="Texture2D" uid="uid://db5nudbv0b34p" path="res://icon.svg" id="13_7a70o"]
 [ext_resource type="PackedScene" uid="uid://c3kv0ek027h37" path="res://Other_Scenes/Enemy2.tscn" id="13_nadc5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvwgo"]
+size = Vector2(538.341, 106.056)
 
 [node name="level" type="Node2D"]
 script = ExtResource("4_r2a3u")
@@ -81,18 +84,29 @@ layer_0/tile_data = PackedInt32Array(1441783, 1, 0, 1507319, 1, 0, 1441784, 1, 0
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Orc" parent="Enemies" instance=ExtResource("13_nadc5")]
-position = Vector2(167, 282)
-
-[node name="Skeleton" parent="Enemies" instance=ExtResource("9_878d7")]
-position = Vector2(1208, 112)
+position = Vector2(123, 145)
 
 [node name="Player" parent="." instance=ExtResource("2_6yjmx")]
 position = Vector2(223, 233)
 
 [node name="Start&Save_scene" parent="." instance=ExtResource("9_u5f4r")]
-position = Vector2(-122, 305)
+position = Vector2(-116, 305)
 
 [node name="Exit" parent="." instance=ExtResource("10_av2sr")]
 position = Vector2(2767, 179)
 
 [node name="Deathzone" parent="." instance=ExtResource("10_ee7jf")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(1612, 1635.64)
+scale = Vector2(20.5625, -0.19745)
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D"]
+modulate = Color(0.0431373, 0.0431373, 0.0431373, 1)
+scale = Vector2(1, 1)
+texture = ExtResource("13_7a70o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.0972595, 15.8877)
+scale = Vector2(0.236322, -1.38485)
+shape = SubResource("RectangleShape2D_wvwgo")
