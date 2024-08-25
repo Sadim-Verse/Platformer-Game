@@ -270,7 +270,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_04s6m")
 }],
-"loop": false,
+"loop": true,
 "name": &"hurt",
 "speed": 15.0
 }, {
@@ -381,7 +381,7 @@ shape = SubResource("CircleShape2D_4miha")
 [node name="Timers" type="Node" parent="."]
 
 [node name="enemy_cooldowm" type="Timer" parent="Timers"]
-wait_time = 0.5
+wait_time = 2.0
 
 [node name="make_attack" type="Timer" parent="Timers"]
 wait_time = 0.5

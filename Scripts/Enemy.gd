@@ -37,6 +37,7 @@ func animate():
 func attack_and_cooldown():
 	if attack_cooldown == false:
 		Global.enemy_attacking = true
+		player.is_hurt = true
 		$AnimationPlayer.current_animation = 'Attack'
 		print("Attack")
 		$Timers/Cooldown_timer.start()
@@ -74,6 +75,7 @@ func cooldown_timer_timeout():
 	$Timers/Attack_restarter.start()
 	player_is_idle = true
 	can_take_damage = true
+	player.is_hurt = false
 	Global.enemy_attacking = false
 	$AnimationPlayer.current_animation = 'Idle'
 	

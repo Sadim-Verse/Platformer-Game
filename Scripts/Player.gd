@@ -10,8 +10,9 @@ var enemy_attack_cooldown = true
 var player_alive = true
 var attack_inProgress = false
 var sprinting = false
-var sprint_speed = 400
+var sprint_speed = 200
 var last_sprint_time = 0
+var is_hurt = false
 
 @export var gravity = 600
 @export var jump_force = 250
@@ -128,14 +129,13 @@ func _on_player_hitbox_body_exited(body):
 		enemy_in_attack_range = false
 		
 func enemy_attack():
-	if enemy_in_attack_range && enemy_attack_cooldown == true:
-		if Global.enemy_attacking == true:
-			#position.x -= 20
-			animated_sprite.play("hurt")
-			health -= 10
-			enemy_attack_cooldown = false
-			$Timers/enemy_cooldowm.start()
-			print(health)
+	if is_hurt == true && enemy_attack_cooldown == true:
+		position.x -= 20
+		animated_sprite.play("hurt")
+		health -= 10
+		enemy_attack_cooldown = false
+		$Timers/enemy_cooldowm.start()
+		print(health)
 
 func _on_enemy_cooldowm_timeout():
 	enemy_attack_cooldown = true
@@ -148,7 +148,6 @@ func player_died():
 		#Add the die animation animated_sprite.play("died")
 		#Add the extra life function
 		#Add the go to menu screen function
-
 
 func attack():
 	if Input.is_action_just_pressed("primary_attack"):
