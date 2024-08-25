@@ -1,2 +1,2 @@
 # Platformer Game
- A 2D platformer game about a female knight trying to reach the goal
+ A young swordswoman must stop an impending doom when the lord of Monsters threatens to plunge the world into chaos, by releasing the once sealed monsters and corrupting humans.
