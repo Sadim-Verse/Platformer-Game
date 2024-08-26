@@ -129,11 +129,11 @@ func _on_player_hitbox_body_exited(body):
 		enemy_in_attack_range = false
 		
 func enemy_attack():
-	if is_hurt == true && enemy_attack_cooldown == true:
+	if is_hurt == true:  # Only check if hurt
 		position.x -= 20
 		animated_sprite.play("hurt")
 		health -= 10
-		enemy_attack_cooldown = false
+		enemy_attack_cooldown = false  # Can be moved outside if needed
 		$Timers/enemy_cooldowm.start()
 		print(health)
 
