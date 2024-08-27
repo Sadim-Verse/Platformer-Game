@@ -31,6 +31,7 @@ func _physics_process(delta):
 	player_animations()
 	sprint()
 	enemy_attack()
+	player_is_hurt()
 	player_died()
 	attack()
 	
@@ -129,16 +130,24 @@ func _on_player_hitbox_body_exited(body):
 		enemy_in_attack_range = false
 		
 func enemy_attack():
-	if is_hurt == true:  # Only check if hurt
-		position.x -= 20
-		animated_sprite.play("hurt")
-		health -= 10
-		enemy_attack_cooldown = false  # Can be moved outside if needed
-		$Timers/enemy_cooldowm.start()
-		print(health)
+	if enemy_in_attack_range && enemy_attack_cooldown == true:
+		if Global.enemy_attacking == true:
+			#position.x -= 20
+			#animated_sprite.play("hurt")
+			health -= 10
+			enemy_attack_cooldown = false
+			$Timers/enemy_cooldowm.start()
+			print(health)
 
 func _on_enemy_cooldowm_timeout():
 	enemy_attack_cooldown = true
+
+func player_is_hurt():
+	if is_hurt == true:
+		if $Timers/hurt_timer.is_stopped():
+			#print("hurting")
+			$Timers/hurt_timer.start()
+			#return
 
 func player_died():
 	if health <= 0:
@@ -160,3 +169,9 @@ func _on_make_attack_timeout():
 	$Timers/make_attack.stop()
 	Global.player_attacking = false
 	attack_inProgress = false
+
+
+func _on_hurt_timer_timeout():
+	#position.x -= 20
+	print("hurting")
+	animated_sprite.play("hurt")
