@@ -3197,6 +3197,7 @@ texture = ExtResource("1_06rpb")
 9:3/0 = 0
 9:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 9:3/0/physics_layer_0/angular_velocity = 0.0
+9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 10:3/0 = 0
 10:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 10:3/0/physics_layer_0/angular_velocity = 0.0
@@ -4060,6 +4061,7 @@ texture = ExtResource("2_rafsq")
 17:10/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_ydjck"]
+occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 35
 terrain_set_0/mode = 0

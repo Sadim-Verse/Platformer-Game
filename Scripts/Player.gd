@@ -31,7 +31,7 @@ func _physics_process(delta):
 	player_animations()
 	sprint()
 	enemy_attack()
-	player_is_hurt()
+	#player_is_hurt()
 	player_died()
 	attack()
 	

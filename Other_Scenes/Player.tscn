@@ -428,6 +428,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="Hurt_Animation" type="Node2D" parent="."]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Hurt_Animation"]
 root_node = NodePath("../..")
@@ -442,6 +443,7 @@ texture = ExtResource("11_jiitm")
 hframes = 4
 
 [node name="Death_Animation" type="Node2D" parent="."]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Death_Animation"]
 root_node = NodePath("../..")
