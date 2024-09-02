@@ -1,7 +1,18 @@
-[gd_scene load_steps=8 format=3 uid="uid://dgeubog5vbg8x"]
+[gd_scene load_steps=14 format=3 uid="uid://dgeubog5vbg8x"]
 
+[ext_resource type="Script" path="res://Scripts/level1.gd" id="1_5iyjc"]
 [ext_resource type="Texture2D" uid="uid://clxme4mbd3gn2" path="res://Assets/Battlegrounds/kenney_tiny-dungeon/Tilemap/tilemap_packed.png" id="1_y8wn1"]
 [ext_resource type="Texture2D" uid="uid://brf564ybk4n7e" path="res://Assets/lights/textures/circle.png" id="2_irfep"]
+[ext_resource type="PackedScene" uid="uid://7s6ljd1nw5f5" path="res://Other_Scenes/Player.tscn" id="4_baqyy"]
+[ext_resource type="PackedScene" uid="uid://cloptta8m1tow" path="res://Other_Scenes/start&save_scene.tscn" id="5_r0q4u"]
+[ext_resource type="PackedScene" uid="uid://dbx1iqggv5ho6" path="res://Other_Scenes/exit.tscn" id="6_dxk34"]
+[ext_resource type="PackedScene" uid="uid://be3whvdhujl5j" path="res://Other_Scenes/deathzone.tscn" id="7_g0fps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_74o1l"]
+size = Vector2(12, 24)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bsqry"]
+polygon = PackedVector2Array(400, 164, 401, 176, 401, 186, 413, 187, 415, 177, 415, 169, 415, 163)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_1mmit"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -14,6 +25,7 @@ texture = ExtResource("1_y8wn1")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1.85616, 8, -1.32583, 8, 4.33103, -8, 3.44715)
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -113,7 +125,6 @@ texture = ExtResource("1_y8wn1")
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
-2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 4.33103, -8, 4.15425)
 3:2/0 = 0
 3:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:2/0/physics_layer_0/angular_velocity = 0.0
@@ -467,20 +478,35 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_c4as0")
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_bsqry"]
-polygon = PackedVector2Array(400, 164, 401, 176, 401, 186, 413, 187, 415, 177, 415, 169, 415, 163)
-
 [node name="New_Level" type="Node2D"]
+script = ExtResource("1_5iyjc")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Lights"]
 rotation = -0.340339
 color = Color(0.180392, 0.180392, 0.180392, 1)
 shadow_enabled = true
 shadow_color = Color(0.0352941, 0.0352941, 0.0352941, 0.431373)
 shadow_filter = 2
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
+[node name="CanvasModulate" type="CanvasModulate" parent="Lights"]
 color = Color(0.0980392, 0.137255, 0.054902, 1)
+
+[node name="Statue_Lantern" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Statue_Lantern"]
+position = Vector2(408, 175)
+shape = SubResource("RectangleShape2D_74o1l")
+
+[node name="PointLight2D" type="PointLight2D" parent="Statue_Lantern"]
+position = Vector2(410, 177)
+color = Color(0.317647, 0.4, 0.654902, 1)
+energy = 1.5
+texture = ExtResource("2_irfep")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Statue_Lantern"]
+occluder = SubResource("OccluderPolygon2D_bsqry")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ykxyl")
@@ -492,13 +518,16 @@ layer_1/tile_data = PackedInt32Array(655380, 262144, 2, 655381, 262144, 2, 65537
 layer_2/name = "Objects"
 layer_2/tile_data = PackedInt32Array(720921, 524288, 2, 655385, 524288, 1)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("4_baqyy")]
+position = Vector2(622, 199)
 
-[node name="PointLight2D" type="PointLight2D" parent="StaticBody2D"]
-position = Vector2(410, 177)
-color = Color(0.317647, 0.4, 0.654902, 1)
-energy = 1.5
-texture = ExtResource("2_irfep")
+[node name="Start&Save_scene" parent="." instance=ExtResource("5_r0q4u")]
+position = Vector2(264, 94)
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D"]
-occluder = SubResource("OccluderPolygon2D_bsqry")
+[node name="Exit" parent="." instance=ExtResource("6_dxk34")]
+position = Vector2(1131, -329)
+metadata/_edit_lock_ = true
+
+[node name="Deathzone" parent="." instance=ExtResource("7_g0fps")]
+position = Vector2(937, 775)
+metadata/_edit_lock_ = true
