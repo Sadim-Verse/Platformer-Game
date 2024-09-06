@@ -169,7 +169,7 @@ animations = [{
 }]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lf6ct"]
-polygon = PackedVector2Array(-14, -36, -16, -21, -12, -8, -2, -2, 8, -5, 11, -17, 11, -29, 10, -37, -2, -34)
+polygon = PackedVector2Array(-9, -32, -16, -21, -12, -8, -2, -2, 8, -5, 11, -17, 11, -29, 10, -37, -2, -34)
 
 [node name="Start&Save_scene" type="StaticBody2D"]
 script = ExtResource("1_o3tmc")
@@ -196,4 +196,5 @@ shadow_enabled = true
 texture = ExtResource("3_m5m8u")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource("OccluderPolygon2D_lf6ct")

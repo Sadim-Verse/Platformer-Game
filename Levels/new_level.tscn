@@ -5771,7 +5771,7 @@ layer_3/tile_data = PackedInt32Array()
 position = Vector2(622, 199)
 
 [node name="Start&Save_scene" parent="." instance=ExtResource("5_r0q4u")]
-position = Vector2(348, 388)
+position = Vector2(355, 378)
 
 [node name="Exit" parent="." instance=ExtResource("6_dxk34")]
 position = Vector2(1131, -329)
