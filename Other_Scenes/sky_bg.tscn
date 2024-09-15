@@ -7,7 +7,7 @@
 script = ExtResource("1_meqlo")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-modulate = Color(0.607843, 0.407843, 0.0627451, 1)
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
 motion_mirroring = Vector2(960, 540)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]

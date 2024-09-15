@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bmupekp60jwmp" path="res://Assets/Characters/Knight_player/Hurt_KG_2.png" id="11_jiitm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_032ee"]
-size = Vector2(18, 41)
+size = Vector2(30, 59)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qobd4"]
 atlas = ExtResource("1_o7ytp")
@@ -351,7 +351,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4miha"]
-radius = 26.3059
+radius = 34.3657
 
 [sub_resource type="Animation" id="Animation_4cv3q"]
 resource_name = "Hurt"
@@ -397,12 +397,11 @@ collision_mask = 109
 script = ExtResource("1_8h272")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 11.5)
+position = Vector2(-4, 11.5)
 shape = SubResource("RectangleShape2D_032ee")
 
 [node name="player" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 10)
-scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lacfv")
 animation = &"hurt"
 autoplay = "idle"
@@ -413,7 +412,7 @@ autoplay = "idle"
 collision_mask = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-position = Vector2(3, 10)
+position = Vector2(-1, 15)
 shape = SubResource("CircleShape2D_4miha")
 
 [node name="Timers" type="Node" parent="."]
