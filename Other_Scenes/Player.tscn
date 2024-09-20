@@ -397,18 +397,20 @@ collision_mask = 109
 script = ExtResource("1_8h272")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 11.5)
+position = Vector2(1, 12)
 shape = SubResource("RectangleShape2D_032ee")
 
 [node name="player" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 10)
 sprite_frames = SubResource("SpriteFrames_lacfv")
-animation = &"hurt"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_bottom = 500
 
 [node name="player_hitbox" type="Area2D" parent="."]
+visible = false
 collision_mask = 33
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
