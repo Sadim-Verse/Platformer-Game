@@ -1,18 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkxfg1wq3mfp8"]
+[gd_scene load_steps=2 format=3 uid="uid://dkxfg1wq3mfp8"]
 
-[ext_resource type="Script" path="res://Scripts/sky_bg.gd" id="1_meqlo"]
 [ext_resource type="Texture2D" uid="uid://ji1ya8ev7mv4" path="res://Assets/Battlegrounds/Legacy's_Background/Background.png" id="1_nxeki"]
 
 [node name="BG" type="ParallaxBackground"]
-script = ExtResource("1_meqlo")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-modulate = Color(0.270588, 0.270588, 0.270588, 1)
-motion_mirroring = Vector2(960, 540)
+motion_scale = Vector2(0, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-texture_repeat = 2
+[node name="Background" type="Sprite2D" parent="ParallaxLayer"]
 texture = ExtResource("1_nxeki")
 centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 960, 540)
