@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dkxfg1wq3mfp8"]
+[gd_scene load_steps=3 format=3 uid="uid://dkxfg1wq3mfp8"]
 
+[ext_resource type="Script" path="res://Scripts/sky_bg.gd" id="1_gih7i"]
 [ext_resource type="Texture2D" uid="uid://ji1ya8ev7mv4" path="res://Assets/Battlegrounds/Legacy's_Background/Background.png" id="1_nxeki"]
 
 [node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_gih7i")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0, 0)
