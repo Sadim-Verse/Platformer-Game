@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr3gtsfywm6l0"
-path="res://.godot/imported/CatumetGamesFurniture.png-4a7089027958bc9f0b7b3ecdad1663c1.ctex"
+uid="uid://dto0js6bgrsg0"
+path="res://.godot/imported/Background_0.png-4a12901327df82e2316289c0a1a96051.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Battlegrounds/CatumetGamesFurniture.png"
-dest_files=["res://.godot/imported/CatumetGamesFurniture.png-4a7089027958bc9f0b7b3ecdad1663c1.ctex"]
+source_file="res://Assets/Battlegrounds/New_Lvl1 BG/Background_0.png"
+dest_files=["res://.godot/imported/Background_0.png-4a12901327df82e2316289c0a1a96051.ctex"]
 
 [params]
 
