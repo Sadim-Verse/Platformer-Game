@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dbx1iqggv5ho6"]
+[gd_scene load_steps=14 format=3 uid="uid://dbx1iqggv5ho6"]
 
 [ext_resource type="Script" path="res://Scripts/exit.gd" id="1_d6er4"]
 [ext_resource type="Texture2D" uid="uid://crhhnxid1er5r" path="res://Assets/Fire_Totem/Fire_Totem-full_Sheet.png" id="1_sq0gl"]
@@ -68,9 +68,6 @@ size = Vector2(51, 70.5)
 radius = 15.0
 height = 50.0
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f1123"]
-polygon = PackedVector2Array(-12, -36, -13, -22, -12, -13, -6, -7, 1, -6, 8, -9, 11, -17, 11, -26, 9, -35, 2, -35)
-
 [node name="Exit" type="Area2D"]
 collision_layer = 16
 collision_mask = 2
@@ -97,9 +94,5 @@ shape = SubResource("CapsuleShape2D_5fi6q")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.862745, 0.439216, 0.2, 1)
-energy = 0.5
 shadow_enabled = true
 texture = ExtResource("3_87sar")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_f1123")
