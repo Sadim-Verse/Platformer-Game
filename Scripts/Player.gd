@@ -10,7 +10,7 @@ var enemy_attack_cooldown = true
 var player_alive = true
 var attack_inProgress = false
 var sprinting = false
-var sprint_speed = 200
+var sprint_speed = 190
 var last_sprint_time = 0
 var is_hurt = false
 
@@ -18,12 +18,15 @@ var is_hurt = false
 @export var jump_force = 250
 @export var jumps_left = max_jumps
 var launched = true
-@export var speed = 150
+@export var speed = 140
 var active = true
 
 
 @onready var animated_sprite = $player
 
+func _ready():
+	Global.player = self 
+	Global.player_original_pos = position
 
 func _physics_process(delta):
 	
@@ -48,6 +51,9 @@ func basic_movement(delta):
 		jump_logic()
 		
 		direction = Input.get_axis("move_left", "move_right")
+		
+	if Input.is_action_pressed("Drop_down") && is_on_floor():
+		position.y += 3
 	
 	
 	velocity.x = direction * speed

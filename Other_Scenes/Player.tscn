@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://7s6ljd1nw5f5"]
+[gd_scene load_steps=60 format=3 uid="uid://7s6ljd1nw5f5"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_8h272"]
 [ext_resource type="Texture2D" uid="uid://d3yfbv2pq5mbi" path="res://Assets/Characters/Knight_player/Walking_KG_1.png" id="1_o7ytp"]
@@ -11,9 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://bg7c4x30yyy27" path="res://Assets/Characters/Knight_player/Idle_KG_2.png" id="7_whnrr"]
 [ext_resource type="Texture2D" uid="uid://de4ggpownejwd" path="res://Assets/Characters/Knight_player/Walking_KG_2.png" id="10_1dvs1"]
 [ext_resource type="Texture2D" uid="uid://bmupekp60jwmp" path="res://Assets/Characters/Knight_player/Hurt_KG_2.png" id="11_jiitm"]
+[ext_resource type="Texture2D" uid="uid://brf564ybk4n7e" path="res://Assets/lights/textures/circle.png" id="12_3qbb1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_032ee"]
-size = Vector2(30, 59)
+size = Vector2(20, 43)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qobd4"]
 atlas = ExtResource("1_o7ytp")
@@ -397,11 +398,12 @@ collision_mask = 109
 script = ExtResource("1_8h272")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 12)
+position = Vector2(1, 10.5)
 shape = SubResource("RectangleShape2D_032ee")
 
 [node name="player" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, 10)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_lacfv")
 animation = &"idle"
 autoplay = "idle"
@@ -450,6 +452,11 @@ visible = false
 root_node = NodePath("../..")
 
 [node name="Sprite2D" type="Sprite2D" parent="Death_Animation"]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.3, 0.3)
+energy = 1.5
+texture = ExtResource("12_3qbb1")
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

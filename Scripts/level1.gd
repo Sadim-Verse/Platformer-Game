@@ -17,7 +17,7 @@ func _ready():
 		trap.touchedPlayer.connect(_on_traps_touched_player)
 		
 	exit.body_entered.connect(on_exit_body_entered)
-	deathZone.body_entered.connect(_on_deathzone_body_entered)
+	#deathZone.body_entered.connect(_on_deathzone_body_entered)
 
 func _process(_delta):
 	input_actions()
@@ -30,8 +30,8 @@ func input_actions():
 		get_tree().reload_current_scene()
 	
 
-func _on_deathzone_body_entered(_body):
-	reset_player()
+#func _on_deathzone_body_entered(_body):
+	#reset_player() 
 
 func _on_traps_touched_player():
 	reset_player()
@@ -48,4 +48,3 @@ func on_exit_body_entered(body):
 			await get_tree().create_timer(2).timeout
 			get_tree().change_scene_to_packed(next_level)
 	
-
