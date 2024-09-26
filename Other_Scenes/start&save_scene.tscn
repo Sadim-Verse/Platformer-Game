@@ -184,7 +184,7 @@ frame = 3
 frame_progress = 0.852875
 
 [node name="Spawn_position" type="Marker2D" parent="."]
-position = Vector2(27, -64)
+position = Vector2(120, -43)
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(22, -7)

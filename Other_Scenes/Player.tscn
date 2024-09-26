@@ -455,7 +455,8 @@ root_node = NodePath("../..")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(0.3, 0.3)
-energy = 1.5
+color = Color(0.685835, 0.685835, 0.685835, 1)
+energy = 0.8
 texture = ExtResource("12_3qbb1")
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
