@@ -23,10 +23,16 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
-"NPC_MAN1": "res://Dialogues/NPC_MAN1.dch"
+"NPC_MAN1": "res://Dialogues/NPC_MAN1.dch",
+"NPC_woman1": "res://Dialogues/NPC_woman1.dch",
+"chief": "res://Dialogues/chief.dch",
+"npc_woman2": "res://Dialogues/npc_woman2.dch"
 }
 directories/dtl_directory={
-"npc_man1": "res://Dialogues/npc_man1.dtl"
+"chief": "res://Dialogues/chief.dtl",
+"npc_man1": "res://Dialogues/npc_man1.dtl",
+"npc_woman1": "res://Dialogues/npc_woman1.dtl",
+"npc_woman2": "res://Dialogues/npc_woman2.dtl"
 }
 variables={}
 

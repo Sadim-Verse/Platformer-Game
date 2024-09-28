@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 
 
@@ -6,7 +6,7 @@ var player_detected = false
 
 func start_dialogue():
 	if player_detected:
-		run_dialogue("npc_man1")
+		run_dialogue("npc_woman2")
 	
 
 func run_dialogue(dialogue_string):
@@ -15,14 +15,15 @@ func run_dialogue(dialogue_string):
 	#Dialogic.end_timeline()
 
 
-func _on_body_entered(body: Node2D) -> void:
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_detected = true
 		start_dialogue()
-		print("Entered!")
+		print("Ent!")
 
 
-func _on_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_detected = false
-		print("Exited!")
+		print("Exit!")
