@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=3 format=3 uid="uid://cbgyfm82quu4s"]
+
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_p0oq4"]
+[ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_itln7"]
+
+[resource]
+script = ExtResource("2_itln7")
+name = "dialogue_style"
+base_overrides = {
+"global_font_size": "14.0"
+}
+layers = Array[ExtResource("1_p0oq4")]([])
+metadata/_latest_layer = -1

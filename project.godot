@@ -35,6 +35,9 @@ directories/dtl_directory={
 "npc_woman2": "res://Dialogues/npc_woman2.dtl"
 }
 variables={}
+layout/style_list=["res://Dialogues/New_style.tres"]
+layout/default_style=""
+glossary/default_case_sensitive=true
 
 [display]
 
