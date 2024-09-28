@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cloptta8m1tow" path="res://Other_Scenes/start&save_scene.tscn" id="9_u5f4r"]
 [ext_resource type="PackedScene" uid="uid://dbx1iqggv5ho6" path="res://Other_Scenes/exit.tscn" id="10_av2sr"]
 [ext_resource type="PackedScene" uid="uid://be3whvdhujl5j" path="res://Other_Scenes/deathzone.tscn" id="10_ee7jf"]
-[ext_resource type="Texture2D" uid="uid://db5nudbv0b34p" path="res://icon.svg" id="13_7a70o"]
+[ext_resource type="Texture2D" uid="uid://dis1t6j3p6no2" path="res://icon.svg" id="13_7a70o"]
 [ext_resource type="PackedScene" uid="uid://c3kv0ek027h37" path="res://Other_Scenes/Enemy2.tscn" id="13_nadc5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvwgo"]

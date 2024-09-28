@@ -1,0 +1,105 @@
+[gd_scene load_steps=13 format=3 uid="uid://cp3jep2qtevw7"]
+
+[ext_resource type="Script" path="res://Scripts/npc_man_1.gd" id="1_o4ypt"]
+[ext_resource type="Texture2D" uid="uid://cxfar3r2ucorm" path="res://Assets/Characters/NPC_Characters_v1.0/Male1.png" id="1_vrg3f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7hyw"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph76x"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avnos"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiik0"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6b1n"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(0, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qd82j"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(32, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpdww"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(64, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pntqf"]
+atlas = ExtResource("1_vrg3f")
+region = Rect2(96, 48, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tihmd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7hyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph76x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avnos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kiik0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6b1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qd82j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpdww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pntqf")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 11.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation_2",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c4tkg"]
+radius = 20.1556
+
+[node name="NPCs_detection" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_o4ypt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_tihmd")
+animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.560094
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -0.5)
+shape = SubResource("CircleShape2D_c4tkg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
