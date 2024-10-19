@@ -11,7 +11,9 @@ func start_dialogue():
 
 func run_dialogue(dialogue_string):
 	
-	Dialogic.start(dialogue_string)
+	Dialogic.Styles.load_style("New_style")
+	var layout = Dialogic.start(dialogue_string)
+	layout.register_character(load("res://Dialogues/NPC_MAN1.dch"), $".")
 	#Dialogic.end_timeline()
 
 

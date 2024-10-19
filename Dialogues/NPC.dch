@@ -6,11 +6,11 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "New_Style_File"
 },
 "default_portrait": "",
 "description": "",
-"display_name": "NPC_woman1",
+"display_name": "NPC",
 "mirror": false,
 "nicknames": [""],
 "offset": Vector2(0, 0),

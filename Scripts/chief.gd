@@ -9,7 +9,7 @@ func start_dialogue():
 	
 
 func run_dialogue(dialogue_string):
-	
+	Dialogic.Styles.load_style("New_Style_File")
 	Dialogic.start(dialogue_string)
 	#Dialogic.end_timeline()
 

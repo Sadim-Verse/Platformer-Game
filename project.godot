@@ -23,6 +23,7 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"NPC": "res://Dialogues/NPC.dch",
 "NPC_MAN1": "res://Dialogues/NPC_MAN1.dch",
 "NPC_woman1": "res://Dialogues/NPC_woman1.dch",
 "chief": "res://Dialogues/chief.dch",
@@ -35,7 +36,7 @@ directories/dtl_directory={
 "npc_woman2": "res://Dialogues/npc_woman2.dtl"
 }
 variables={}
-layout/style_list=["res://Dialogues/New_style.tres"]
+layout/style_list=["res://Dialogues/New_style.tres", "res://Dialogues/New_Style_File.tres"]
 layout/default_style=""
 glossary/default_case_sensitive=true
 

@@ -1,24 +1,23 @@
-[gd_resource type="Resource" script_class="DialogicStyle" load_steps=8 format=3 uid="uid://kgf3mefmnbsb"]
+[gd_resource type="Resource" script_class="DialogicStyle" load_steps=6 format=3 uid="uid://kgf3mefmnbsb"]
 
 [ext_resource type="PackedScene" uid="uid://syki6k0e6aac" path="res://addons/dialogic/Modules/DefaultLayoutParts/Base_TextBubble/text_bubble_base.tscn" id="1_ptmxd"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="2_8pdwr"]
-[ext_resource type="PackedScene" uid="uid://cn674foxwedqu" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Input/full_advance_input_layer.tscn" id="3_bb8cu"]
+[ext_resource type="PackedScene" uid="uid://d2it0xiap3gnt" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_Textbubble/text_bubble_layer.tscn" id="3_bynxb"]
 [ext_resource type="Script" path="res://addons/dialogic/Resources/dialogic_style.gd" id="5_i1nih"]
-[ext_resource type="PackedScene" uid="uid://by6waso0mjpjp" path="res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/textbox_with_speaker_portrait.tscn" id="5_qsp3t"]
 
 [sub_resource type="Resource" id="Resource_vdq28"]
 script = ExtResource("2_8pdwr")
-scene = ExtResource("3_bb8cu")
+scene = ExtResource("3_bynxb")
 overrides = {
-"disabled": "true"
-}
-
-[sub_resource type="Resource" id="Resource_5u7pq"]
-script = ExtResource("2_8pdwr")
-scene = ExtResource("5_qsp3t")
-overrides = {
-"text_alignment": "1",
-"text_custom_color": "Color(0.0677083, 0.0641818, 0.0641818, 1)"
+"behaviour_distance": "40.0",
+"box_corner_radius": "50.0",
+"box_modulate": "Color(0.489583, 0.458984, 0.458984, 0.6)",
+"box_padding": "Vector2(5, 10)",
+"box_wobble_amount": "0.4",
+"box_wobble_detail": "0.15",
+"name_label_enabled": "false",
+"text_max_width": "90.0",
+"text_size": "12.0"
 }
 
 [resource]
@@ -26,5 +25,5 @@ script = ExtResource("5_i1nih")
 name = "New_style"
 base_scene = ExtResource("1_ptmxd")
 base_overrides = {}
-layers = Array[ExtResource("2_8pdwr")]([SubResource("Resource_vdq28"), SubResource("Resource_5u7pq")])
-metadata/_latest_layer = 1
+layers = Array[ExtResource("2_8pdwr")]([SubResource("Resource_vdq28")])
+metadata/_latest_layer = 0
