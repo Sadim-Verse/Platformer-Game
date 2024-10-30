@@ -4,6 +4,13 @@ extends CharacterBody2D
 
 var player_detected = false
 
+func _process(delta: float) -> void:
+	flip()
+
+func flip():
+	$Area2D/Female1.flip_h = true
+	
+
 func start_dialogue():
 	if player_detected:
 		run_dialogue("npc_woman1")
